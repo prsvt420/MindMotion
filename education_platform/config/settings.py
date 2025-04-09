@@ -27,6 +27,7 @@ INSTALLED_APPS: List[str] = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "debug_toolbar",
+    "csp",
 ]
 
 MIDDLEWARE: List[str] = [
@@ -38,6 +39,7 @@ MIDDLEWARE: List[str] = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "debug_toolbar.middleware.DebugToolbarMiddleware",
+    "csp.middleware.CSPMiddleware",
 ]
 
 ROOT_URLCONF: str = "config.urls"
@@ -105,3 +107,14 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 FIXTURE_DIRS: List[str] = [
     "fixtures",
 ]
+
+CONTENT_SECURITY_POLICY: Dict[str, Any] = {
+    "DIRECTIVES": {
+        "default-src": ["'self'"],
+        "font-src": ["'self'", "https://fonts.gstatic.com"],
+        "img-src": ["'self'"],
+        "script-src": ["'self'"],
+        "style-src": ["'self'", "https://fonts.googleapis.com/", "'unsafe-inline'"],
+        "worker-src": ["'self'", "blob:"],
+    }
+}
