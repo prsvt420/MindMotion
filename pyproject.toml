@@ -25,3 +25,4 @@ package-mode = false
 [tool.poetry.group.education_platform.dependencies]   # poetry add ... --group education_platform | poetry install --with=education_platform
 django = "^5.2"
 python-dotenv = "^1.1.0"
+django-stubs = "^5.1.3"
