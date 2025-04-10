@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}О проекте{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'info/css/about_project.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="content__description">
+    <p class="description__text"><span class="description__highlighting">“MindMotion” — </span>инновационная
+        образовательная IT-платформа объединяющая современное обучение и искусственный интеллект. Платформа предлагает
+        структурированные курсы, в которых содержится теория, а также практические задачи на ее закрепление. После
+        выполнения ИИ анализирует решение, проверяет соответствие лучшим практикам и дает персонализированные
+        рекомендации по улучшению решения. Также ИИ может мотивировать обучающегося при выполнении задачи. После
+        успешного прохождение курса пользователь получает уникальный сертификат.</p>
+    <p class="description__purpose"><span class="description__highlighting">Цель проекта — </span>повышение качества
+        IT-образования в России.</p>
+    <p class="description__audience"><span class="description__highlighting">Целевая аудитория — </span>новички и
+        профессионалы желающие развиваться в IT.</p>
+    <p><span class="description__highlighting">Уникальные особенности:</span></p>
+    <ul class="description__uniqueness-list">
+        <li class="description__uniqueness-item"><span class="description__highlighting">Использование ИИ для анализа решения:</span> С первых шагов в
+            программировании обучающиеся получают мгновенную обратную связь от искусственного интеллекта. Это позволяет
+            сразу исправлять ошибки, оптимизировать код и применять лучшие практики.</li>
+        <li class="description__uniqueness-item"><span class="description__highlighting">Обучение через улучшение, а не просто
+                "правильно/неправильно":</span> Вместо стандартной проверки на соответствие тестам, ИИ разбирает логику,
+            архитектуру и стиль кода, объясняя, как сделать решение эффективнее. Так студенты учатся не просто
+            "проходить задания", а писать код, как Senior разработчики.</li>
+        <li class="description__uniqueness-item"><span class="description__highlighting">Персонализированные рекомендации:</span> Алгоритмы адаптируются под
+            уровень пользователя: новичкам дают больше пояснений по основам, а опытным — углубленную аналитику по
+            оптимизации.</li>
+        <li class="description__uniqueness-item"><span class="description__highlighting">Профилактика "слепого копирования":</span> Даже если решение
+            технически верное, ИИ покажет, где можно применить более элегантные подходы, предотвращая механическое
+            заучивание.</li>
+        <li class="description__uniqueness-item"><span class="description__highlighting">Мотивация от ИИ:</span> При решении задачи, ИИ выдает мотивационные
+            фразы, что способствует не сдаваться.</li>
+    </ul>
+</div>
+{% endblock %}
