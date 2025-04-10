@@ -12,6 +12,11 @@ urlpatterns: List[Any] = [
         include("education_platform.apps.info.urls", namespace="info"),
         name="info",
     ),
+    path(
+        "accounts/",
+        include("education_platform.apps.accounts.urls", namespace="accounts"),
+        name="accounts",
+    ),
 ]
 
 if settings.DEBUG:

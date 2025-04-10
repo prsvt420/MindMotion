@@ -29,6 +29,7 @@ INSTALLED_APPS: List[str] = [
     "debug_toolbar",
     "csp",
     "education_platform.apps.info",
+    "education_platform.apps.accounts",
 ]
 
 MIDDLEWARE: List[str] = [
