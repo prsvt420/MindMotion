@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Вход{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'accounts/css/signin.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="content__signin">
+    <div class="signin__top">
+        <h2 class="signin__title">Вход</h2>
+    </div>
+
+    <form class="signin__form" action="{% url 'accounts:signin' %}" method="POST">
+        {% csrf_token %}
+
+        {% if form.non_field_errors %}
+            <div class="signin__errors">
+                {{ form.non_field_errors }}
+            </div>
+        {% endif %}
+
+        <input class="signin__input" type="text" name="username" placeholder="Имя пользователя">
+        <input class="signin__input" type="password" name="password" placeholder="Пароль">
+        <button class="signin__button" type="submit">Войти</button>
+    </form>
+
+    <div class="signin__links">
+        <a class="signin__link" href="#">Регистрация</a>
+        <a class="signin__link" href="#">Забыли пароль?</a>
+    </div>
+</div>
+{% endblock %}

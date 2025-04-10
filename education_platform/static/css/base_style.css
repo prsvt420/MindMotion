@@ -7,10 +7,10 @@
 
     --main-color: #44c1a3;
     --main-background-color: white;
-    --button-background-color: #e3e1e1;
+    --button-background-color: #e9e9e9;
     --button-background-color-hover: var(--main-color);
 
-    --border-radius-button: 25px;
+    --border-radius-elem: 25px;
     --border-radius: 15px;
     --border-button: 1px solid #aeabab;
 

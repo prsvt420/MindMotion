@@ -9,7 +9,7 @@
                 <a href="#" role="button">{{ request.user.username }}</a>
                 <a href="{% url 'accounts:signout' %}" role="button">Выйти</a>
             {% else %}
-                <a href="#" role="button">Войти</a>
+                <a href="{% url 'accounts:signin' %}" role="button">Войти</a>
             {% endif %}
         </div>
     </div>

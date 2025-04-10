@@ -21,7 +21,7 @@ header {
 .header__input {
     padding: 14px 0 14px 20px;
     border: var(--border-button);
-    border-radius: var(--border-radius-button);
+    border-radius: var(--border-radius-elem);
     background-color: var(--button-background-color);
     color: var(--font-color);
     font-size: 1rem;
@@ -47,7 +47,7 @@ header {
         padding: 14px 20px;
         height: 50px;
         border: var(--border-button);
-        border-radius: var(--border-radius-button);
+        border-radius: var(--border-radius-elem);
         background-color: var(--button-background-color);
         color: var(--font-color);
         font-size: 1rem;
