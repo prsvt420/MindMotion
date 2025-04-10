@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}О команде{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'info/css/about_team.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="content__participants">
+    <div class="participant">
+        <img class="participant__img" src="{% static 'info/img/team/potemkina_anna_alekseevna.png' %}"
+            alt="Потемкина Анна Алексеевна">
+        <h2 class="participant__name">Потемкина<br>Анна Алексеевна</h2>
+        <p class="participant__role">Designer & Compliance Specialist</p>
+    </div>
+    <div class="participant">
+        <img class="participant__img" src="{% static 'info/img/team/tokarev_denis_alexandrovich.png' %}"
+            alt="Токарев Денис Александрович">
+        <h2 class="participant__name">Токарев<br>Денис Александрович</h2>
+        <p class="participant__role">Developer & TeamLead</p>
+    </div>
+    <div class="participant">
+        <img class="participant__img" src="{% static 'info/img/team/shashina_ksenia_evgenieva.png' %}"
+            alt="Шашина Ксения Евгеньевна">
+        <h2 class="participant__name">Шашина<br>Ксения Евгеньевна</h2>
+        <p class="participant__role">Designer & Speaker</p>
+    </div>
+</div>
+{% endblock %}

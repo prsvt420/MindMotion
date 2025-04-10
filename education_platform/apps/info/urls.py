@@ -8,4 +8,5 @@ app_name: str = "info"
 
 urlpatterns: List[URLPattern] = [
     path("about_project/", views.AboutProjectView.as_view(), name="about_project"),
+    path("about_team/", views.AboutTeamView.as_view(), name="about_team"),
 ]
