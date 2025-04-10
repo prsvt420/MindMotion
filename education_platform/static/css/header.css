@@ -24,7 +24,7 @@ header {
     border-radius: var(--border-radius-button);
     background-color: var(--button-background-color);
     color: var(--font-color);
-    font-size: 1.2rem;
+    font-size: 1rem;
     width: 8%;
     height: 50px;
     min-width: 200px;
@@ -50,7 +50,8 @@ header {
         border-radius: var(--border-radius-button);
         background-color: var(--button-background-color);
         color: var(--font-color);
-        font-size: 1.1rem;
+        font-size: 1rem;
+        margin-right: 10px;
     }
 
     a:hover {
@@ -67,7 +68,7 @@ header {
     }
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 450px) {
     header {
         padding: 20px 0 100px 0;
         gap: 10px;
