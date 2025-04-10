@@ -28,6 +28,7 @@ INSTALLED_APPS: List[str] = [
     "django.contrib.staticfiles",
     "debug_toolbar",
     "csp",
+    "education_platform.apps.info",
 ]
 
 MIDDLEWARE: List[str] = [
