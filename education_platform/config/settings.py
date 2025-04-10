@@ -124,3 +124,8 @@ CONTENT_SECURITY_POLICY: Dict[str, Any] = {
         "worker-src": ["'self'", "blob:"],
     }
 }
+
+AUTHENTICATION_BACKENDS: List[str] = [
+    "education_platform.apps.accounts.authentication_backends.EmailAuthBackend",
+    "django.contrib.auth.backends.ModelBackend",
+]
