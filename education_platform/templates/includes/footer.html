@@ -2,13 +2,13 @@
     <div class="footer__chapters">
         <div class="footer__chapter">
             <h2 class="footer__chapter_title">Правила</h2>
-            <a class="footer__chapter_link" href="">Политика конфиденциальности</a>
-            <a class="footer__chapter_link" href="">Пользовательское соглашение</a>
+            <a class="footer__chapter_link" href="{% url 'info:policy' %}">Политика конфиденциальности</a>
+            <a class="footer__chapter_link" href="{% url 'info:terms' %}">Пользовательское соглашение</a>
         </div>
         <div class="footer__chapter">
             <h2 class="footer__chapter_title">Проект</h2>
-            <a class="footer__chapter_link" href="">О проекте</a>
-            <a class="footer__chapter_link" href="">О команде</a>
+            <a class="footer__chapter_link" href="{% url 'info:about_project' %}">О проекте</a>
+            <a class="footer__chapter_link" href="{% url 'info:about_team' %}">О команде</a>
         </div>
         <div class="footer__chapter">
             <h2 class="footer__chapter_title">Контакты</h2>
