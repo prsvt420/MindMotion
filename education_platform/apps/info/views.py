@@ -11,3 +11,9 @@ class AboutTeamView(TemplateView):
     """Представление для страницы "О команде"."""
 
     template_name: str = "info/about_team.html"
+
+
+class PolicyView(TemplateView):
+    """Представление для страницы "Политика конфиденциальности"."""
+
+    template_name: str = "info/policy.html"
