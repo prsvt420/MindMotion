@@ -17,3 +17,9 @@ class PolicyView(TemplateView):
     """Представление для страницы "Политика конфиденциальности"."""
 
     template_name: str = "info/policy.html"
+
+
+class TermsView(TemplateView):
+    """Представление для страницы "Пользовательское соглашение"."""
+
+    template_name: str = "info/terms.html"
