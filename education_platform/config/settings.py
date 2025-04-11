@@ -81,7 +81,7 @@ AUTH_PASSWORD_VALIDATORS: List[Dict[str, str]] = [
         "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
     },
     {
-        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",
+        "NAME": "education_platform.apps.accounts.custom_validators.CustomMinimumLengthValidator",
     },
     {
         "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",

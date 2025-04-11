@@ -1,4 +1,4 @@
-from django.contrib.auth import logout
+from django.contrib.auth import login, logout
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.views import LoginView
 from django.core.handlers.wsgi import WSGIRequest
@@ -6,8 +6,10 @@ from django.http import HttpResponse
 from django.shortcuts import redirect
 from django.urls import reverse_lazy
 from django.views import View
+from django.views.generic import CreateView
 
-from education_platform.apps.accounts.forms import SignInForm
+from education_platform.apps.accounts.forms import SignInForm, SignUpForm
+from education_platform.apps.accounts.mixins import AnonymousRequiredMixin
 
 
 class SignOutView(View):
@@ -28,3 +30,17 @@ class SignInView(LoginView):
 
     def get_success_url(self) -> str:
         return reverse_lazy("info:about_project")
+
+
+class SignUpView(AnonymousRequiredMixin, CreateView):
+    """Представление для регистрации нового пользователя."""
+
+    form_class: type[SignUpForm] = SignUpForm
+    template_name: str = "accounts/signup.html"
+    success_url: str = reverse_lazy("info:about_project")
+
+    def form_valid(self, form: SignUpForm) -> HttpResponse:
+        response: HttpResponse = super().form_valid(form)
+        user = form.instance
+        login(self.request, user, backend="django.contrib.auth.backends.ModelBackend")
+        return response

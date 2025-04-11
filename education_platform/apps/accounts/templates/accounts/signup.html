@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Регистрация{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'accounts/css/signup.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="content__signup">
+    <div class="signup__top">
+        <h2 class="signup__title">Регистрация</h2>
+    </div>
+
+    <form class="signup__form" action="{% url 'accounts:signup' %}" method="POST">
+        {% csrf_token %}
+
+        {% if form.non_field_errors %}
+            <div class="signup__errors">
+                {{ form.non_field_errors }}
+            </div>
+        {% endif %}
+
+        {{ form.first_name.errors }}
+        <input value="{% if form.first_name.value %}{{ form.first_name.value }} {% endif %}" class="signup__input" type="text" name="first_name" placeholder="Имя">
+        {{ form.last_name.errors }}
+        <input value="{% if form.last_name.value %}{{ form.last_name.value }} {% endif %}" class="signup__input" type="text" name="last_name" placeholder="Фамилия">
+        {{ form.email.errors }}
+        <input value="{% if form.email.value %}{{ form.email.value }} {% endif %}" class="signup__input" type="text" name="email" placeholder="Email">
+        {{ form.username.errors }}
+        <input value="{% if form.username.value %}{{ form.username.value }} {% endif %}" class="signup__input" type="text" name="username" placeholder="Имя пользователя">
+        {{ form.password1.errors|add:form.password2.errors }}
+        <input class="signup__input" type="password" name="password1" placeholder="Пароль">
+        <input class="signup__input" type="password" name="password2" placeholder="Подтверждение пароля">
+        <button class="signup__button" type="submit">Зарегистрироваться</button>
+    </form>
+
+    <div class="signup__links">
+        <a class="signup__link" href="{% url 'accounts:signin' %}">Уже есть аккаунт?</a>
+    </div>
+</div>
+{% endblock %}
