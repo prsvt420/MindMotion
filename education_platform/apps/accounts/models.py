@@ -9,6 +9,7 @@ class User(AbstractUser):
         help_text="Email обязателен для заполнения.",
     )
     username: models.CharField = models.CharField(
+        verbose_name="имя пользователя",
         max_length=20,
         unique=True,
         help_text="Имя пользователя обязательно для заполнения.",

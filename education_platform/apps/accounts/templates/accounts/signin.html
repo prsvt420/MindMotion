@@ -23,7 +23,7 @@
             </div>
         {% endif %}
 
-        <input class="signin__input" type="text" name="username" placeholder="Имя пользователя">
+        <input value="{% if form.username.value %}{{ form.username.value }}{% endif %}" class="signin__input" type="text" name="username" placeholder="Имя пользователя">
         <input class="signin__input" type="password" name="password" placeholder="Пароль">
         <button class="signin__button" type="submit">Войти</button>
     </form>
