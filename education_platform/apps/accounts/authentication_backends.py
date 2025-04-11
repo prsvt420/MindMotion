@@ -2,8 +2,9 @@ from typing import Any
 
 from django.contrib.auth import get_user_model
 from django.contrib.auth.backends import ModelBackend
-from django.contrib.auth.models import User
 from django.http import HttpRequest
+
+from education_platform.apps.accounts.models import User
 
 UserModel = get_user_model()
 

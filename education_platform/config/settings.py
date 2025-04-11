@@ -129,3 +129,5 @@ AUTHENTICATION_BACKENDS: List[str] = [
     "education_platform.apps.accounts.authentication_backends.EmailAuthBackend",
     "django.contrib.auth.backends.ModelBackend",
 ]
+
+AUTH_USER_MODEL: str = "accounts.User"
