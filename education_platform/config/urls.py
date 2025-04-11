@@ -7,6 +7,7 @@ from django.urls import include, path
 
 urlpatterns: List[Any] = [
     path("admin/", admin.site.urls),
+    path("", include("education_platform.apps.core.urls", namespace="core")),
     path(
         "info/",
         include("education_platform.apps.info.urls", namespace="info"),

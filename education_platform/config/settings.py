@@ -31,6 +31,7 @@ INSTALLED_APPS: List[str] = [
     "education_platform.apps.info",
     "education_platform.apps.accounts",
     "education_platform.apps.catalog",
+    "education_platform.apps.core",
 ]
 
 MIDDLEWARE: List[str] = [
